@@ -12,7 +12,7 @@
 using namespace std;
 
 
-int score_of_strategy(string *filename){
+int score_of_strategy(string *filename) {
     map<string, int> point_decoder;
     point_decoder["A X"] = 1 + 3;
     point_decoder["A Y"] = 2 + 6;
@@ -35,7 +35,7 @@ int score_of_strategy(string *filename){
 }
 
 
-int smart_strategy(string *filename){
+int smart_strategy(string *filename) {
     map<string, int> point_decoder;
     point_decoder["A X"] = 3 + 0;
     point_decoder["A Y"] = 1 + 3;
