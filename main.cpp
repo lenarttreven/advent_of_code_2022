@@ -6,12 +6,13 @@
 #include "day_5/day_5.h"
 #include "day_6/day_6.h"
 #include "day_7/day_7.h"
+#include "day_8/day_8.h"
 
 using namespace std;
 
 int main() {
-    string filename = "../day_7/main.txt";
-    int out = smallest_directory_for_delete(&filename, 70000000, 30000000);
+    string filename = "../day_8/main.txt";
+    int out = highest_scenic_score(&filename);
     cout << out << endl;
     return 0;
 }

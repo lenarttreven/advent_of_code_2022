@@ -10,10 +10,6 @@
 #include <vector>
 #include <list>
 #include <iostream>
-#include <map>
-#include <fstream>
-#include <deque>
-#include <set>
 
 
 using namespace std;
@@ -27,7 +23,7 @@ public:
     string name;
     bool is_dir = false;
 
-    File(string file_name = "Root", int file_size = -1, bool dir = true) {
+    explicit File(string file_name = "Root", int file_size = -1, bool dir = true) {
         parent = nullptr;
         name = std::move(file_name);
         size = file_size;
@@ -80,14 +76,14 @@ public:
         current_file = root_file;
     }
 
-    void compute_sizes();
+    void compute_sizes() const;
 
-    int small_files(int max_size);
+    int small_files(int max_size) const;
 
-    vector<int> all_sizes();
+    vector<int> all_sizes() const;
 };
 
-vector<int> FileSystem::all_sizes() {
+vector<int> FileSystem::all_sizes() const {
     vector<int> total_sizes;
     vector<File *> stack;
     File *root_file = FileSystem::root_file;
@@ -118,7 +114,7 @@ vector<int> FileSystem::all_sizes() {
 }
 
 
-int FileSystem::small_files(int max_size) {
+int FileSystem::small_files(int max_size) const {
     int total_size = 0;
     vector<File *> stack;
     File *root_file = FileSystem::root_file;
@@ -149,7 +145,7 @@ int FileSystem::small_files(int max_size) {
 }
 
 
-void FileSystem::compute_sizes() {
+void FileSystem::compute_sizes() const {
     vector<File *> stack;
     File *root_file = FileSystem::root_file;
     stack.push_back(root_file);
