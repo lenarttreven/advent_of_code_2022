@@ -7,12 +7,13 @@
 #include "day_6/day_6.h"
 #include "day_7/day_7.h"
 #include "day_8/day_8.h"
+#include "day_9/day_9.h"
 
 using namespace std;
 
 int main() {
-    string filename = "../day_8/main.txt";
-    int out = highest_scenic_score(&filename);
+    string filename = "../day_9/main.txt";
+    int out = long_rope(&filename);
     cout << out << endl;
     return 0;
 }
