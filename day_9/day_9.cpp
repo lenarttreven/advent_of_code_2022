@@ -90,7 +90,7 @@ int long_rope(string *filename) {
     set<tuple<int, int>> visited_places;
     vector<tuple<int, int>> knots;
     for (int i = 0; i < 9; i++) {
-        knots.push_back({0, 0});
+        knots.emplace_back(0, 0);
     }
     visited_places.insert(knots[8]);
 

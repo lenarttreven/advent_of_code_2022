@@ -8,12 +8,15 @@
 #include "day_7/day_7.h"
 #include "day_8/day_8.h"
 #include "day_9/day_9.h"
+#include "day_10/day_10.h"
 
 using namespace std;
 
 int main() {
-    string filename = "../day_9/main.txt";
-    int out = long_rope(&filename);
-    cout << out << endl;
+    string filename = "../day_10/main.txt";
+    vector<string> out = draw_code(&filename);
+    for (string line: out){
+        cout << line << endl;
+    }
     return 0;
 }
