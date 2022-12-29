@@ -9,14 +9,13 @@
 #include "day_08/day_8.h"
 #include "day_09/day_9.h"
 #include "day_10/day_10.h"
+#include "day_11/day_11.h"
 
 using namespace std;
 
 int main() {
-    string filename = "../day_10/main.txt";
-    vector<string> out = draw_code(&filename);
-    for (string line: out){
-        cout << line << endl;
-    }
+    string filename = "../day_11/main.txt";
+    int out = monkey_business_level(&filename);
+    cout << out << endl;
     return 0;
 }
