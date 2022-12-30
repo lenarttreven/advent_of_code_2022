@@ -10,12 +10,13 @@
 #include "day_09/day_9.h"
 #include "day_10/day_10.h"
 #include "day_11/day_11.h"
+#include "day_12/day_12.h"
 
 using namespace std;
 
 int main() {
-    string filename = "../day_11/main.txt";
-    int out = monkey_business_level(&filename);
-    cout << out << endl;
+    string filename = "../day_12/main.txt";
+    int out = fewest_steps_to_reach_top(&filename);
+    cout << out  << endl;
     return 0;
 }
